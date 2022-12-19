@@ -18,8 +18,10 @@ public class TestController {
     @Value("${spring.cloud.client.ip-address}")
     private String ip;
 
-    @Value("${server.port}")
-    private String port;
+//    @Value("${server.port}")
+//    private String port;
+
+    private String port="2100";
 
     @RequestMapping("/start")
     public String testStart(){
