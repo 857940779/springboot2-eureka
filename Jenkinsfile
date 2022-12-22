@@ -10,7 +10,8 @@ node{
          checkout([$class: 'GitSCM', branches: [[name: "*/${git_branch}"]], extensions: [], userRemoteConfigs: [[credentialsId: "${git_auth}", url: "${git_url}"]]])
     }
     stage('compile'){
-       sh "mvn clean compile"
-       echo "done"
+       //sh "mvn clean compile"
+       //echo "done"
+       mvn clean compile
     }
 }
