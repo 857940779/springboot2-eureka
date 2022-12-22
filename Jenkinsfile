@@ -1,15 +1,15 @@
-//git凭证Id
+//git tokenid on jenkins
 def git_auth = "5dcb0253-4860-4c65-8985-efaf7137755f"
-//git的项目地址
+//git repo
 def git_url = "https://github.com/857940779/springboot2-eureka.git"
-//git拉取的分支
+//git pull branch
 def git_branch="master"
 
 node{
-    stage('拉取代码'){
+    stage('pull'){
          checkout([$class: 'GitSCM', branches: [[name: "*/${git_branch}"]], extensions: [], userRemoteConfigs: [[credentialsId: "${git_auth}", url: "${git_url}"]]])
     }
-    stage('编译'){
+    stage('compile'){
        sh "mvn clean compile"
        echo "done"
     }
