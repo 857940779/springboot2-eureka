@@ -12,6 +12,6 @@ node{
     stage('compile'){
        //sh "mvn clean compile"
        //echo "done"
-       sh 'mvn clean compile'
+       mvn clean compile
     }
 }
