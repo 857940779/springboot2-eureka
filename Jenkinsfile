@@ -1,7 +1,7 @@
 //git tokenid on jenkins
-def git_auth = "5dcb0253-4860-4c65-8985-efaf7137755f"
+def git_auth = "ad28bfe9-586c-45a2-861f-0467054059ca"
 //git repo
-def git_url = "https://github.com/857940779/springboot2-eureka.git"
+def git_url = "git@github.com:857940779/springboot2-eureka.git"
 //git pull branch
 def git_branch="master"
 
